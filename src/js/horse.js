@@ -11,10 +11,22 @@ function createHorseLeg(positionX, positionY, positionZ) {
   var material = new THREE.MeshBasicMaterial({color: 0x8C5013});
   var leg = new THREE.Mesh(geometry, material);
 
-  leg.position.x = positionX
-  leg.position.y = positionY
-  leg.position.z = positionZ
+  leg.position.x = positionX;
+  leg.position.y = positionY;
+  leg.position.z = positionZ;
 
   return leg;
 
+}
+
+function createHorseHead() {
+  var geometry = new THREE.BoxGeometry(0.5, 2, 0.5);
+  var material = new THREE.MeshBasicMaterial({color: 0x8C5013});
+  var head = new THREE.Mesh(geometry, material);
+
+  head.position.x = 0;
+  head.position.y = 0;
+  head.position.z = 0;
+
+  return head;
 }
