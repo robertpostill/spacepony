@@ -19,14 +19,42 @@ function createHorseLeg(positionX, positionY, positionZ) {
 
 }
 
-function createHorseHead() {
-  var geometry = new THREE.BoxGeometry(0.5, 2, 0.5);
+function createHorseNeck() {
+  var geometry = new THREE.BoxGeometry(0.5, 0.75, 0.5);
   var material = new THREE.MeshBasicMaterial({color: 0x8C5013});
-  var head = new THREE.Mesh(geometry, material);
+  var neck = new THREE.Mesh(geometry, material);
 
-  head.position.x = 0;
-  head.position.y = 0;
-  head.position.z = 0;
+  neck.position.x = 0;
+  neck.position.y = 0.75;
+  neck.position.z = 2.25;
+
+  return neck;
+}
+
+function createHorseHead() {
+  var geometry = new THREE.Geometry();
+  geometry.vertices.push(new THREE.Vector3(-0.25, 0, 0));
+  geometry.vertices.push(new THREE.Vector3(0, 0, 0));
+  geometry.vertices.push(new THREE.Vector3(0.25, 0, 0));
+  geometry.vertices.push(new THREE.Vector3(0, 0.15, 0));
+  geometry.vertices.push(new THREE.Vector3(0, -0.15, 0));
+  geometry.vertices.push(new THREE.Vector3(0, 0, -0.15));
+  geometry.vertices.push(new THREE.Vector3(0, 0, 0.15));
+
+  geometry.faces.push(new THREE.Face3(3, 0, 6));
+  geometry.faces.push(new THREE.Face3(3, 6, 2));
+  geometry.faces.push(new THREE.Face3(6, 0, 4));
+  geometry.faces.push(new THREE.Face3(6, 4, 2));
+  geometry.faces.push(new THREE.Face3(3, 2, 5));
+  geometry.faces.push(new THREE.Face3(3, 5, 0));
+  geometry.faces.push(new THREE.Face3(2, 4, 5));
+  geometry.faces.push(new THREE.Face3(5, 4, 0));
+
+  geometry.computeFaceNormals()
+  var material = new THREE.MeshLambertMaterial({
+      color: 0x8C5013
+  });
+  var head = new THREE.Mesh(geometry, material);
 
   return head;
 }
