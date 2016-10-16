@@ -34,22 +34,23 @@ var axes = new createAxes(10);
 scene.add(axes);
 
 //Add a horsebody
-// var horseBody = new createHorseBody();
-// scene.add(horseBody);
-//
-// var frontRightLeg = new createHorseLeg(0.5, -1, 2);
-// scene.add(frontRightLeg);
-//
-// var frontLeftLeg = new createHorseLeg(-0.5, -1, 2);
-// scene.add(frontLeftLeg);
-//
-// var backRightLeg = new createHorseLeg(0.5, -1, -2);
-// scene.add(backRightLeg);
-//
-// var backLeftLeg = new createHorseLeg(-0.5, -1, -2);
-// scene.add(backLeftLeg);
-//
-// var neck = new createHorseNeck();
-// scene.add(neck);
+var horseBody = new createHorseBody();
+scene.add(horseBody);
+
+var frontRightLeg = new createHorseLeg(0.5, -1, 2);
+scene.add(frontRightLeg);
+
+var frontLeftLeg = new createHorseLeg(-0.5, -1, 2);
+scene.add(frontLeftLeg);
+
+var backRightLeg = new createHorseLeg(0.5, -1, -2);
+scene.add(backRightLeg);
+
+var backLeftLeg = new createHorseLeg(-0.5, -1, -2);
+scene.add(backLeftLeg);
+
+var neck = new createHorseNeck();
+scene.add(neck);
+
 var head = new createHorseHead();
 scene.add(head);

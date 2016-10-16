@@ -1,6 +1,6 @@
 function createHorseBody() {
   var geometry = new THREE.BoxGeometry(1.5, 1, 5);
-  var material = new THREE.MeshBasicMaterial({color: 0x8C5013});
+  var material = new THREE.MeshLambertMaterial({color: 0x8C5013});
   var body = new THREE.Mesh(geometry, material);
 
   return body;
@@ -8,7 +8,7 @@ function createHorseBody() {
 
 function createHorseLeg(positionX, positionY, positionZ) {
   var geometry = new THREE.BoxGeometry(0.5, 2, 0.5);
-  var material = new THREE.MeshBasicMaterial({color: 0x8C5013});
+  var material = new THREE.MeshLambertMaterial({color: 0x8C5013});
   var leg = new THREE.Mesh(geometry, material);
 
   leg.position.x = positionX;
@@ -21,7 +21,7 @@ function createHorseLeg(positionX, positionY, positionZ) {
 
 function createHorseNeck() {
   var geometry = new THREE.BoxGeometry(0.5, 0.75, 0.5);
-  var material = new THREE.MeshBasicMaterial({color: 0x8C5013});
+  var material = new THREE.MeshLambertMaterial({color: 0x8C5013});
   var neck = new THREE.Mesh(geometry, material);
 
   neck.position.x = 0;
@@ -33,13 +33,13 @@ function createHorseNeck() {
 
 function createHorseHead() {
   var geometry = new THREE.Geometry();
-  geometry.vertices.push(new THREE.Vector3(-0.25, 0, 0));
+  geometry.vertices.push(new THREE.Vector3(-0.5, 0, 0));
   geometry.vertices.push(new THREE.Vector3(0, 0, 0));
-  geometry.vertices.push(new THREE.Vector3(0.25, 0, 0));
-  geometry.vertices.push(new THREE.Vector3(0, 0.15, 0));
-  geometry.vertices.push(new THREE.Vector3(0, -0.15, 0));
-  geometry.vertices.push(new THREE.Vector3(0, 0, -0.15));
-  geometry.vertices.push(new THREE.Vector3(0, 0, 0.15));
+  geometry.vertices.push(new THREE.Vector3(0.5, 0, 0));
+  geometry.vertices.push(new THREE.Vector3(0, 0.25, 0));
+  geometry.vertices.push(new THREE.Vector3(0, -0.25, 0));
+  geometry.vertices.push(new THREE.Vector3(0, 0, -0.25));
+  geometry.vertices.push(new THREE.Vector3(0, 0, 0.25));
 
   geometry.faces.push(new THREE.Face3(3, 0, 6));
   geometry.faces.push(new THREE.Face3(3, 6, 2));
@@ -55,6 +55,14 @@ function createHorseHead() {
       color: 0x8C5013
   });
   var head = new THREE.Mesh(geometry, material);
+
+  head.position.x = 0;
+  head.position.y = 1.5;
+  head.position.z = 2.5;
+  head.rotation.y = 1.5;
+  head.scale.x = 1.5;
+  head.scale.y = 1.5;
+  head.scale.z = 1.5;
 
   return head;
 }
