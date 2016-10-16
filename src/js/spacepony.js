@@ -4,22 +4,7 @@ var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
-renderer.setClearColor(0x0000ff);
-window.onkeyup = handleKeyUp;
-window.onkeydown = handleKeyDown;
-
-// Adds the specific keys
-var keys = {
-    q: 81,
-    w: 87,
-    a: 65,
-    s: 83,
-    z: 90,
-    x: 88,
-    e: 69,
-    r: 82,
-};
-var keysDown = new Array();
+renderer.setClearColor(0x000000);
 
 camera.position.z = 2;
 
@@ -34,11 +19,9 @@ function render() {
 }
 
 function animate() {
-    handleKeys();
     requestAnimationFrame(animate);
     controls.update();
     render();
-    //handleKeys();
 }
 
 // Add lighting to scene
