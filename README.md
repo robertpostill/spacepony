@@ -48,4 +48,14 @@ The great thing about knowing how to program better is I actually know how to na
 I'm currently looking at `horse.js` and I'm thinking that perhaps I'll need to refactor it a bit. I'm repeating code that doesn't need to be repeated and I think I could perhaps create a `createHorse()` function that will create an entire horse! Maybe I'll just have lots of horses of different sizes dotted around the scene because why the hell not.
 
 ###### Browser Comments
-One thing I do have to say about all this `three.js` stuff is that wholly shit FireFox is a piece of crap for rendering!!! It looks like utter crap in FireFox. Which is a shame because I enjoy using FireFox a lot. It's my main browser but I've been thinking for ages that I should just make the switch back to Google Chrome instead of waiting for FireFox to ship the new version that will eventually change my negative views.
+One thing I do have to say about all this `three.js` stuff is that wholly shit Firefox is a piece of crap for rendering!!! It looks like utter crap in Firefox. Which is a shame because I enjoy using Firefox a lot. It's my main browser but I've been thinking for ages that I should just make the switch back to Google Chrome instead of waiting for Firefox to ship the new version that will eventually change my negative views.
+
+***Firefox Rendering***
+
+![Firefox Rendering](/src/img/firefox_rendering.png?raw=true "Firefox Rendering")
+
+***Chrome Rendering***
+
+![Chrome Rendering](/src/img/chrome_rendering.png?raw=true "Chrome Rendering")
+
+***As you can see it looks like I've drawn it in PaintMS for the Firefox version whereas the Chrome version is much smoother and shows the real potential of using three.js.***
