@@ -32,3 +32,7 @@ scene.add(camera);
 // Add axes
 var axes = new createAxes(10);
 scene.add(axes);
+
+//Add a horsebody
+var horseBody = new createHorseBody();
+scene.add(horseBody);
