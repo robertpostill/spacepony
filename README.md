@@ -59,3 +59,7 @@ One thing I do have to say about all this `three.js` stuff is that wholly shit F
 ![Chrome Rendering](/src/img/chrome_rendering.png?raw=true "Chrome Rendering")
 
 ***As you can see it looks like I've drawn it in PaintMS for the Firefox version whereas the Chrome version is much smoother and shows the real potential of using three.js.***
+
+I've found that changing the type of material shader I use also helps to improve the look of the object when it's rendered.
+
+Using `MeshLambertMaterial` instead of `MeshBasicMaterial` improves the rendering by a heap. It also looks way nicer.
